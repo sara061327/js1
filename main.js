@@ -17,7 +17,7 @@ window.onload = function () {
 }
 
 function start(){
-  var startTime = Date.now();
+   startTime = Date.now();
   
 　　　measureTime();
 　　　
@@ -51,9 +51,12 @@ function reset(){
 function measureTime() {
 
     timer = setTimeout(function () {
-       
+        
+      
         elapsedTime = Date.now() - startTime + holdTime;
+         console.log(Date(elapsedTime))
         showTime.textContent = new Date(elapsedTime).toISOString().slice(14, 23);
+       
      
         measureTime();
     }, 10);
